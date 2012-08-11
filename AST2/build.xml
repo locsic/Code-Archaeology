@@ -1,0 +1,27 @@
+<?xml version ="1.0"?>
+<project name="CA_AST" default="compile" basedir=".">
+	
+	<property name="src" value="."/>
+	<property name="build" value="build"/>
+	<path id="class.path">
+		<fileset dir="lib">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<target name="init">
+		<mkdir dir="${build}"/>
+	</target>
+
+	<target name="compile" depends="init">
+		<echo>=== COMPILE         MILE ===</echo>
+		<echo>=== SPONSORED BY REDBULL ===</echo>
+		<echo>=== SPONSORED BY REDBULL ===</echo>
+		<echo>=== SPONSORED BY REDBULL ===</echo>
+		<!-- Compile the java code -->
+		<echo>Compiling ${src} files ...</echo>
+		<javac srcdir="${src}" destdir="${build}" >
+			<classpath refid="class.path" />
+		</javac>
+	</target>
+</project>
